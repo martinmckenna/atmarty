@@ -65,6 +65,12 @@ module.exports = {
                     {
                         source: 'dist/index.html',
                         destination: './index.html'
+                    }, {
+                        source: 'dist/bundle.js',
+                        destination: './bundle.js'
+                    }, {
+                        source: 'dist/styles.min.css',
+                        destination: './styles.min.css'
                     }
                 ]
             }
