@@ -2,6 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin"); // compile css
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'); // minimize css
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // make html file from template
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -10,10 +11,10 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist/')
+        path: path.resolve(__dirname, 'dist')
     },
     devServer: {
-        contentBase: 'dist',
+        contentBase: './dist',
         watchContentBase: true
     },
     module: {
@@ -39,13 +40,6 @@ module.exports = {
                         }
                     ]
                 })
-            }, {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: ['file-loader'],
-                include: [
-                    path.resolve(__dirname, "./src/assets/"),
-                    "/node_modules/"
-                ]
             }
         ]
     },
@@ -64,6 +58,16 @@ module.exports = {
         new webpack
             .optimize
             .UglifyJsPlugin({include: /\.min\.js$/, minimize: true}),
-        new HtmlWebpackPlugin({title: 'Custom Template', filename: '../index.html', template: './dist/index.html', inject: 'html'})
+        new HtmlWebpackPlugin({title: 'AtMarty - Home', template: './dist/templates/index.html'}),
+        new FileManagerPlugin({
+            onEnd: {
+                move: [
+                    {
+                        source: 'dist/index.html',
+                        destination: './index.html'
+                    }
+                ]
+            }
+        })
     ]
 };
