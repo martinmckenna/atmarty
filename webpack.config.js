@@ -3,6 +3,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin"); // compile css
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'); // minimize css
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // make html file from template
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -55,9 +56,7 @@ module.exports = {
             },
             canPrint: true
         }),
-        new webpack
-            .optimize
-            .UglifyJsPlugin({include: /\.min\.js$/, minimize: true}),
+        new UglifyJSPlugin(),
         new HtmlWebpackPlugin({title: 'AtMarty - Home', template: './dist/templates/index.html'}),
         new FileManagerPlugin({
             onEnd: {
