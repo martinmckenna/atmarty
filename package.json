@@ -6,9 +6,7 @@
   "repository": "git@github.com:martinmckenna/atmarty.git",
   "author": "Marty <mmckenna.phila@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "tingle.js": "^0.12.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
