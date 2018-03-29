@@ -172,6 +172,7 @@ BODY
 
 .card.project {
   width: 20%;
+  padding-bottom: 3em;
 }
 
 .card-header {
