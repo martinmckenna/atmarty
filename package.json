@@ -6,7 +6,9 @@
   "repository": "git@github.com:martinmckenna/atmarty.git",
   "author": "Marty <mmckenna.phila@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "formdata-polyfill": "^3.0.9"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
