@@ -1,4 +1,11 @@
 <?php
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -11,10 +18,22 @@ $email = $content->email;
 $name = $content->name;
 $message = $content->desc;
 
-mail('mmckenna.phila@gmail.com', 'ATMARTY: From ' . $email, 'Name: ' . $name . '
+$mail = new PHPMailer(true);           // Passing `true` enables exceptions
+try {                                  // TCP port to connect to
 
-' . 'Email ' . $email . '
+    //Recipients
+    $mail->setFrom($email, 'Mailer');
+    $mail->addAddress('mmckenna.phila@gmail.com', 'Marty');     // Add a recipient
 
-' . $message);
-
-file_put_contents('logs.txt', print_r($content, true)."\n\n", FILE_APPEND);
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'ATMARTY Email';
+    $mail->Body    = 'Name: ' . $name . '
+    
+    ' . 'Email: ' . $email . '
+    
+    ' . $message;
+    $mail->send();
+} catch (Exception $e) {
+    file_put_contents('logs.txt', print_r($mail->ErrorInfo, true)."\n\n", FILE_APPEND);
+}
