@@ -15,6 +15,6 @@ function getAge() {
   return age;
 }
 
-document.getElementById('age').innerText = getAge();
+// document.getElementById('age').innerText = getAge();
 
 document.getElementById('copyright-year').innerText = currentYear;
