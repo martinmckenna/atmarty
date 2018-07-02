@@ -3,9 +3,9 @@
 //Load Composer's autoloader
 require './vendor/autoload.php';
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
@@ -19,6 +19,16 @@ $message = $content->desc;
 
 $mail = new PHPMailer(true); // Passing `true` enables exceptions
 try {
+    if (!$email) {
+        throw new Exception('missing "email" field');
+    }
+    if (!$name) {
+        throw new Exception('missing "name" field');
+    }
+    if (!$message) {
+        throw new Exception('missing "desc" field');
+    }
+
     //Recipients
     $mail->setFrom('mmckenna.phila@gmail.com', 'Mailer');
     $mail->addAddress('mmckenna.phila@gmail.com', 'Marty');

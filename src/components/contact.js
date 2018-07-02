@@ -26,7 +26,8 @@ const submitForm = e => {
         }
         form.reset();
         quizAnswer.style.borderColor = 'grey';
-      });
+      })
+      .catch(e => e);
   } else {
     alert('Please answer the quiz answer correctly!');
     quizAnswer.style.borderColor = 'red';
