@@ -57,13 +57,17 @@ module.exports = {
             canPrint: true
         }),
         new UglifyJSPlugin(),
-        new HtmlWebpackPlugin({title: 'AtMarty - Home', template: './dist/templates/index.html'}),
+        new HtmlWebpackPlugin({ template: './dist/templates/index.html' }),
+        new HtmlWebpackPlugin({ template: './dist/templates/404.html', filename: '404.html' }),
         new FileManagerPlugin({
             onEnd: {
                 move: [
                     {
                         source: 'dist/index.html',
                         destination: './index.html'
+                    }, {
+                        source: 'dist/404.html',
+                        destination: './404.html'
                     }, {
                         source: 'dist/bundle.js',
                         destination: './bundle.js'

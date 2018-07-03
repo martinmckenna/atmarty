@@ -29,6 +29,10 @@ body {
   align-content: flex-start;
 }
 
+.center {
+  text-align: center;
+}
+
 a {
   color: #3b96fb;
 }
