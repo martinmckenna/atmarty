@@ -34,7 +34,8 @@ const submitForm = e => {
   }
 };
 
+const form = document.getElementById('contact-form');
+
 if (window.location.pathname === '/') {
-  const form = document.getElementById('contact-form');
   form.addEventListener('submit', e => submitForm(e));
 }
