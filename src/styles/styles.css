@@ -88,10 +88,6 @@ textarea {
   li {
     font-size: 0.9em;
   }
-  /** necessary to prevent zooming on mobile*/
-  input, select, textarea {
-    font-size: 16px;
-  }
 }
 
 textarea,
@@ -101,6 +97,7 @@ input[type='button'],
 input[type='submit'] {
   -webkit-appearance: none;
   border-radius: 0;
+  font-size: 16px;
 }
 
 /*
