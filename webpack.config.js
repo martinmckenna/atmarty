@@ -1,12 +1,12 @@
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin"); // compile css
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // minify css
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'); // minimize css
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // make html file from template
 const FileManagerPlugin = require('filemanager-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
+    mode: 'production',
     entry: {
         js: './src/index.js'
     },
@@ -30,33 +30,41 @@ module.exports = {
                     path.resolve(__dirname, "./src/styles/"),
                     "/node_modules/"
                 ],
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                minimize: true
-                            }
-                        }
-                    ]
-                })
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader"
+                ]
             }
         ]
     },
-    plugins: [
-        new ExtractTextPlugin("styles.min.css"),
-        new OptimizeCssAssetsPlugin({
-            assetNameRegExp: /\.optimize\.css$/g,
-            cssProcessor: require('cssnano'),
-            cssProcessorOptions: {
-                discardComments: {
-                    removeAll: true
+    optimization: {
+        minimizer: [
+            new OptimizeCssAssetsPlugin({
+                cssProcessorOptions: {
+                    discardComments: {
+                        removeAll: true
+                    }
                 }
-            },
-            canPrint: true
-        }),
-        new UglifyJSPlugin(),
+            })
+        ]
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: "styles.min.css",
+            chunkFilename: "[id].css"
+          }),
+        // new OptimizeCssAssetsPlugin({
+        //     assetNameRegExp: /\.optimize\.css$/g,
+        //     cssProcessor: require('cssnano'),
+        //     cssProcessorOptions: {
+        //         discardComments: {
+        //             removeAll: true
+        //         }
+        //     },
+        //     canPrint: true
+        // }),
         new HtmlWebpackPlugin({ template: './dist/templates/index.html' }),
         new HtmlWebpackPlugin({ template: './dist/templates/404.html', filename: '404.html' }),
         new FileManagerPlugin({

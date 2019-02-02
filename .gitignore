@@ -1,2 +1,6 @@
 .vscode
 /node_modules
+/debug.log
+/bundle.js
+/*.html
+/*.css
