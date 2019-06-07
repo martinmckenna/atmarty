@@ -62,7 +62,7 @@ try {
     //Content
     $mail->isHTML(true);
     $mail->Subject = 'ATMARTY Email';
-    $mail->Body = '<h3>Name: ' . $name . '</h3><h3>Email: ' . $email . '</h3><p>' . $message . '</p>';
+    $mail->Body = '<h3>Name: ' . $name . '</h3><h3>Email: ' . $email . '</h3><p>' . $message . '</p>' . '<p>' . $_SERVER['HTTP_REFERER'] . '</p>';
     $mail->send();
     $response = array('status' => 'success', 'message' => 'Email sent successfully');
     echo json_encode($response); // return json response to client
