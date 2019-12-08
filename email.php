@@ -1,5 +1,11 @@
 <?php
 
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 //Load Composer's autoloader
 require './vendor/autoload.php';
 
@@ -11,7 +17,7 @@ $origin = $_SERVER['HTTP_ORIGIN'];
 $allowed_domains = [
     'http://localhost:3000',
     'https://www.atmarty.com',
-    'http://www.barcart.net',
+    'http://www.barcart.net'
 ];
 
 if (in_array($origin, $allowed_domains)) {
@@ -28,7 +34,7 @@ if (isset($_SERVER['HTTP_ORIGIN'])) {
   // Access-Control headers are received during OPTIONS requests
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
   if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
-      header("Access-Control-Allow-Methods: GET, POST, OPTIONS");         
+      header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 
   if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
       header("Access-Control-Allow-Headers:        {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
