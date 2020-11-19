@@ -13,7 +13,7 @@ const submitForm = e => {
   let quizAnswer = document.getElementById('quiz');
 
   if (quizAnswer.value == 14) {
-    return fetch('/email.php', {
+    return fetch('https://atmarty.com/email.php', {
       body: JSON.stringify(formToJSON),
       method: 'POST'
     })

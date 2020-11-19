@@ -59,6 +59,7 @@ div,
 textarea,
 input,
 p,
+label,
 span:not(.tingle-modal__closeIcon) {
   font-family: 'Libre Baskerville', Arial, sans-serif;
   line-height: 2.1em;
@@ -267,9 +268,17 @@ BODY
 
 form {
   width: 90%;
-  margin: 0 auto;
-  text-align: center;
   margin-bottom: 1em;
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.contact-form label {
+  width: 91%;
+  margin: 0 auto;
+  align-self: flex-start;
 }
 
 .form-field {
