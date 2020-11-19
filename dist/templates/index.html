@@ -109,13 +109,53 @@
   <div class="card contact">
     <h2 class="card-header" id='contact'>Contact</h2>
     <form id="contact-form" class="contact-form">
-      <input aria-label="name" name="name" type="text" id="input-name" class="form-field name" placeholder="Enter Full Name*" required />
-      <input aria-label="email" name="email" type="email" id="input-email" class="form-field email" placeholder="Enter Email Address*"
-        required />
-      <textarea aria-label="description" name="desc" id="input-desc" cols="30" rows="5" class="form-field desc" placeholder="Enter additional information*"
-        required></textarea>
-      <input aria-label="What is 2 times 7?" type="text" name="quiz" id="quiz" class="form-field quiz" placeholder="What is 2 * 7" required />
-      <input aria-label="submit" type="submit" value="Submit" class="form-field submit" />
+      <label for="name">Name *</label>
+      <input 
+        aria-label="name" 
+        name="name" 
+        type="text" 
+        id="input-name" 
+        class="form-field name" 
+        required
+        placeholder="e.g. Joe Schmo"
+      />
+      <label for="email">Email Address *</label>
+      <input 
+        aria-label="email" 
+        name="email" 
+        type="email" 
+        id="input-email" 
+        class="form-field email"
+        required
+        placeholder="e.g. hihello@gmail.com"
+      />
+      <label for="desc">Description *</label>
+      <textarea 
+        aria-label="description" 
+        name="desc" 
+        id="input-desc" 
+        cols="30" 
+        rows="5" 
+        class="form-field desc" 
+        placeholder="Enter additional information*"
+        required
+      ></textarea>
+      <label for="quiz">What is 2 times 7? *</label>
+      <input 
+        aria-label="What is 2 times 7?" 
+        type="text" 
+        name="quiz" 
+        id="quiz" 
+        class="form-field quiz" 
+        required
+        placeholder="I hope this one is easy."
+      />
+      <input 
+        aria-label="submit" 
+        type="submit" 
+        value="Submit" 
+        class="form-field submit" 
+      />
     </form>
   </div>
   <div id="projects" class="card project cta-1">
