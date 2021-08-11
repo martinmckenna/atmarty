@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
       header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 
   if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
-      header("Access-Control-Allow-Headers:        {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+      header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
 
   exit(0);
 }
@@ -62,13 +62,15 @@ try {
     }
 
     //Recipients
-    $mail->setFrom('mmckenna.phila@gmail.com', 'Mailer');
+    $mail->setFrom('mmckenna.phila@gmail.com', $name);
     $mail->addAddress('mmckenna.phila@gmail.com', 'Marty');
+    $mail->clearReplyTos();
+    $mail->addReplyTo($email, $name);
 
     //Content
     $mail->isHTML(true);
     $mail->Subject = 'ATMARTY Email';
-    $mail->Body = '<h3>Name: ' . $name . '</h3><h3>Email: ' . $email . '</h3><p>' . $message . '</p>' . '<p>' . $_SERVER['HTTP_REFERER'] . '</p>';
+    $mail->Body = '<h3>Name: ' . $name . '</h3><h3>Email: ' . $email . '</h3><p>' . $message . '</p>' . '<p>Referrer: ' . $_SERVER['HTTP_REFERER'] . '</p>';
     $mail->send();
     $response = array('status' => 'success', 'message' => 'Email sent successfully');
     echo json_encode($response); // return json response to client
