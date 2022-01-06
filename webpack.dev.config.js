@@ -2,17 +2,25 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // minify css
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'); // minimize css
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // make html file from template
-const FileManagerPlugin = require('filemanager-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: {
     js: './src/index.js',
   },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  devServer: {
+    port: 8080,
+    client: {
+      overlay: {
+        errors: true,
+        warnings: false
+      }
+    }
   },
   module: {
     rules: [
@@ -52,36 +60,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './dist/templates/404.html',
       filename: '404.html',
-    }),
-    new FileManagerPlugin({
-      events: {
-        onEnd: {
-          copy: [
-            {
-              source: 'dist/index.html',
-              destination: './index.html',
-            },
-            {
-              source: 'dist/404.html',
-              destination: './404.html',
-            },
-            {
-              source: 'dist/bundle.js',
-              destination: './bundle.js',
-            },
-            {
-              source: 'dist/styles.min.css',
-              destination: './styles.min.css',
-            },
-          ],
-          delete: [
-            'dist/index.html', 
-            'dist/404.html',
-            'dist/bundle.js',
-            'dist/styles.min.css'
-          ]
-        },
-      }
-    }),
+    })
   ],
 };
