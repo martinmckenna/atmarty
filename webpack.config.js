@@ -48,10 +48,11 @@ module.exports = {
       filename: 'styles.min.css',
       chunkFilename: '[id].css',
     }),
-    new HtmlWebpackPlugin({ template: './dist/templates/index.html' }),
+    new HtmlWebpackPlugin({ template: './dist/templates/index.html', minify: false }),
     new HtmlWebpackPlugin({
       template: './dist/templates/404.html',
       filename: '404.html',
+      minify: false
     }),
     new FileManagerPlugin({
       events: {
