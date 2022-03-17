@@ -103,30 +103,71 @@
         <a aria-label="Projects Section" href="#projects">Projects section</a> below. If you'd like to get in touch, use that
         <a aria-label="Contact Form" href='#contact'>contact form.</a>
     </p>
+    <p class="about-desc">
+      Some notable work-related projects I've worked on include:
+    </p>
+    <ul class="card-list card-desc work-list">
+      <li>
+        <a 
+          aria-label="Iterable Web SDK on GitHub" 
+          href="https://github.com/iterable/iterable-web-sdk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Iterable's Web SDK
+        </a>
+      </li>
+      <li>
+        <a 
+          aria-label="Barstool Sportsbook, a sports-betting website" 
+          href="https://barstoolsportsbook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          The Barstool Sportsbook
+        </a>
+      </li>
+      <li>
+        <a 
+          aria-label="Linode Cloud Manager, an interface for managing you Cloud servers" 
+          href="https://cloud.linode.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Linode Cloud Manager
+        </a>
+      </li>
+    </ul>
   </div>
   <div class="card contact">
     <h2 class="card-header" id='contact'>Contact</h2>
     <form id="contact-form" class="contact-form">
-      <label for="name">Name *</label>
-      <input 
-        aria-label="name" 
-        name="name" 
-        type="text" 
-        id="input-name" 
-        class="form-field name" 
-        required
-        placeholder="e.g. Joe Schmo"
-      />
-      <label for="email">Email Address *</label>
-      <input 
-        aria-label="email" 
-        name="email" 
-        type="email" 
-        id="input-email" 
-        class="form-field email"
-        required
-        placeholder="e.g. hihello@gmail.com"
-      />
+      <div class="flex-form-wrapper">
+        <div>
+          <label for="name">Name *</label>
+          <input 
+          aria-label="name" 
+          name="name" 
+          type="text" 
+          id="input-name" 
+          class="form-field name" 
+          required
+          placeholder="e.g. Joe Schmo"
+          />
+        </div>
+        <div>
+          <label for="email">Email Address *</label>
+          <input 
+          aria-label="email" 
+          name="email" 
+          type="email" 
+          id="input-email" 
+          class="form-field email"
+          required
+          placeholder="e.g. hihello@gmail.com"
+          />
+        </div>
+      </div>
       <label for="desc">Description *</label>
       <textarea 
         aria-label="description" 
@@ -148,7 +189,8 @@
         required
         placeholder="I hope this one is easy."
       />
-      <input 
+      <input
+        ontouchstart
         aria-label="submit" 
         type="submit" 
         value="Submit" 
@@ -192,7 +234,7 @@
     <ul class='card-desc card-list'>
       <li>
         <a aria-label="Linode Cloud Manager on GitHub" target="_blank" href="https://github.com/linode/manager/commits?author=martinmckenna">
-          Linode Cloud Manager
+          Linode Cloud Manager (GitHub page)
         </a>
       </li>
       <li>

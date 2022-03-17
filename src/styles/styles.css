@@ -95,6 +95,7 @@ input[type='submit'] {
   -webkit-appearance: none;
   border-radius: 0;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 /*
@@ -184,7 +185,6 @@ BODY
 
 .card.project {
   width: 20%;
-  padding-bottom: 3em;
 }
 
 .card-header {
@@ -199,7 +199,11 @@ BODY
 }
 
 .card-list {
-  margin-top: 1em;
+  margin: 1em 0;
+}
+
+.card-list.work-list {
+  margin: 1em;
 }
 
 .card-block {
@@ -217,13 +221,14 @@ BODY
   margin-top: 1em;
   width: 60%;
   padding: 1em;
-  -webkit-box-shadow: 0 7px 0 0 #006be0fa;
-  box-shadow: 0 7px 0 0 #006be0fa;
-  -webkit-transition: all 0.05s ease;
-  -moz-transition: all 0.05s ease;
-  -ms-transition: all 0.05s ease;
-  -o-transition: all 0.05s ease;
-  transition: all 0.05s ease;
+  -webkit-box-shadow: 0 5px 0 0 #006be0fa;
+  box-shadow: 0 5px 0 0 #006be0fa;
+  -webkit-transition: box-shadow 0.05s ease 1ms transform 0.05s ease 1ms;
+  -moz-transition: box-shadow 0.05s ease 1ms transform 0.05s ease 1ms;
+  -ms-transition: box-shadow 0.05s ease 1ms transform 0.05s ease 1ms;
+  -o-transition: box-shadow 0.05s ease 1ms transform 0.05s ease 1ms;
+  transition: box-shadow 0.05s ease 1ms transform 0.05s ease 1ms;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .card-block button:active {
@@ -232,11 +237,11 @@ BODY
   border: none;
   -webkit-box-shadow: 0 0 0 0 #006be0fa;
   box-shadow: 0 0 0 0 #006be0fa;
-  -moz-transform: translateY(3px);
-  -webkit-transform: translateY(3px);
-  -o-transform: translateY(3px);
-  -ms-transform: translateY(3px);
-  transform: translateY(3px);
+  -moz-transform: translateY(5px);
+  -webkit-transform: translateY(5px);
+  -o-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  transform: translateY(5px);
 }
 
 @media (max-width: 1280px) {
@@ -276,7 +281,7 @@ form {
 }
 
 .contact-form label {
-  width: 91%;
+  width: 90%;
   margin: 0 auto;
   align-self: flex-start;
 }
@@ -288,6 +293,36 @@ form {
   border: 1px solid grey;
 }
 
+.flex-form-wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  align-self: flex-start;
+}
+
+.flex-form-wrapper div {
+  width: 48%;
+  max-width: 48%;
+}
+
+.flex-form-wrapper div input {
+  /* email field */
+  width: 100%;
+}
+
+@media (max-width: 550px) {
+  .flex-form-wrapper {
+    display: block;
+  }
+
+  .flex-form-wrapper div {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 input[type='submit'] {
   outline: none;
   margin-top: 0.5em;
@@ -297,22 +332,24 @@ input[type='submit'] {
   width: 50%;
   border-radius: 1em;
   border: none;
-  -webkit-box-shadow: 0 7px 0 0 #00448e;
-  box-shadow: 0 7px 0 0 #00448e;
-  -webkit-transition: all 0.05s ease;
-  -moz-transition: all 0.05s ease;
-  -ms-transition: all 0.05s ease;
-  -o-transition: all 0.05s ease;
-  transition: all 0.05s ease;
+  -webkit-box-shadow: 0 5px 0 0 #00448e;
+  box-shadow: 0 5px 0 0 #00448e;
+  -webkit-transition: box-shadow 0.05s ease 1ms transform 0.05s ease 1ms;
+  -moz-transition: box-shadow 0.05s ease 1ms transform 0.05s ease 1ms;
+  -ms-transition: box-shadow 0.05s ease 1ms transform 0.05s ease 1ms;
+  -o-transition: box-shadow 0.05s ease 1ms transform 0.05s ease 1ms;
+  transition: box-shadow 0.05s ease 1ms transform 0.05s ease 1ms;
+  /* gets rid of iOS gray overlay */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-input[type='submit']:active {
+input[type='submit']:hover:active {
   box-shadow: 0 0 0 0 #006be0fa;
-  -moz-transform: translateY(3px);
-  -webkit-transform: translateY(3px);
-  -o-transform: translateY(3px);
-  -ms-transform: translateY(3px);
-  transform: translateY(3px);
+  -moz-transform: translateY(5px);
+  -webkit-transform: translateY(5px);
+  -o-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  transform: translateY(5px);
 }
 
 /* 
