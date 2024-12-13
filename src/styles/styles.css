@@ -80,7 +80,6 @@ textarea {
     font-size: 1.3em;
   }
   p,
-  div,
   span,
   li {
     font-size: 0.9em;
@@ -200,6 +199,7 @@ BODY
 
 .card-list {
   margin: 1em 0;
+
 }
 
 .card-list.work-list {
