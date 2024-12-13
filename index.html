@@ -86,9 +86,8 @@
     <p class="about-desc">
       I am a front-end developer from Philadelphia (now based in San Diego), who specializes in building functional user
       interfaces and Web APIs. I'm big on code quality, testing that makes sense, and creating
-      extremely modular, re-usable code. Over my career, I've gained experience in the eCommerce, cloud hosting, and sports-betting 
-      industries. But right now I'm working at Iterable, a cross-channel marketing 
-      platform, building a JavaScript and NodeJS SDK for the purposes of making the development experience easy on their customers.
+      extremely modular, re-usable code. Over my career, I've gained experience in the eCommerce, cloud hosting, sports-betting, and digital marketing
+      industries.
     </p>
     <p class="about-desc">
       I like a lot of tech, but I'm really partial to the React and TypeScript ecosystem. In fact,
@@ -103,30 +102,71 @@
         <a aria-label="Projects Section" href="#projects">Projects section</a> below. If you'd like to get in touch, use that
         <a aria-label="Contact Form" href='#contact'>contact form.</a>
     </p>
+    <p class="about-desc">
+      Some notable work-related projects I've worked on include:
+    </p>
+    <ul class="card-list card-desc work-list">
+      <li>
+        <a 
+          aria-label="Iterable Web SDK on GitHub" 
+          href="https://github.com/iterable/iterable-web-sdk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Iterable's Web SDK
+        </a>
+      </li>
+      <li>
+        <a 
+          aria-label="Barstool Sportsbook, a sports-betting website" 
+          href="https://barstoolsportsbook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          The Barstool Sportsbook
+        </a>
+      </li>
+      <li>
+        <a 
+          aria-label="Linode Cloud Manager, an interface for managing you Cloud servers" 
+          href="https://cloud.linode.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Linode Cloud Manager
+        </a>
+      </li>
+    </ul>
   </div>
   <div class="card contact">
     <h2 class="card-header" id='contact'>Contact</h2>
     <form id="contact-form" class="contact-form">
-      <label for="name">Name *</label>
-      <input 
-        aria-label="name" 
-        name="name" 
-        type="text" 
-        id="input-name" 
-        class="form-field name" 
-        required
-        placeholder="e.g. Joe Schmo"
-      />
-      <label for="email">Email Address *</label>
-      <input 
-        aria-label="email" 
-        name="email" 
-        type="email" 
-        id="input-email" 
-        class="form-field email"
-        required
-        placeholder="e.g. hihello@gmail.com"
-      />
+      <div class="flex-form-wrapper">
+        <div>
+          <label for="name">Name *</label>
+          <input 
+          aria-label="name" 
+          name="name" 
+          type="text" 
+          id="input-name" 
+          class="form-field name" 
+          required
+          placeholder="e.g. Joe Schmo"
+          />
+        </div>
+        <div>
+          <label for="email">Email Address *</label>
+          <input 
+          aria-label="email" 
+          name="email" 
+          type="email" 
+          id="input-email" 
+          class="form-field email"
+          required
+          placeholder="e.g. hihello@gmail.com"
+          />
+        </div>
+      </div>
       <label for="desc">Description *</label>
       <textarea 
         aria-label="description" 
@@ -148,7 +188,8 @@
         required
         placeholder="I hope this one is easy."
       />
-      <input 
+      <input
+        ontouchstart
         aria-label="submit" 
         type="submit" 
         value="Submit" 
@@ -157,13 +198,13 @@
     </form>
   </div>
   <div id="projects" class="card project cta-1">
-    <h2 class="card-header">Barcart
-      <a aria-label="Barcart, a digital cocktail reccomendation app" rel="noopener" target="_blank" href="https://barcart.net" class="proj-link">Live</a>
+    <h2 class="card-header">Cocktails App
+      <a aria-label="cocktails app on github" rel="noopener" target="_blank" href="https://github.com/martinmckenna/cocktails-app" class="proj-link">Frontend</a>
       |
-      <a aria-label="Barcart on GitHub" rel="noopener" target="_blank" href="https://github.com/martinmckenna/cocktails-app" class="proj-link">on Github</a>
+      <a aria-label="Cocktails API on GitHub" rel="noopener" target="_blank" href="https://github.com/martinmckenna/cocktails-api" class="proj-link">API</a>
     </h2>
     <p class="card-desc">
-      Barcart is a digitized version of a cocktail recipe book. Plain and simple - the user
+      Cocktails App is a digitized version of a cocktail recipe book. Plain and simple - the user
       enters the ingredients they have on their shelf and the app will generate the list
       of cocktails that can be made with those ingredients. Users can login and search for
       cocktails, while admin users can create and delete ingredients and cocktails. 
@@ -189,10 +230,10 @@
       building tools on the web fun. Here's some projects I've contributed to in the
       past:
     </p>
-    <ul class='card-desc card-list'>
+    <ul class='card-desc card-list opensource-list'>
       <li>
         <a aria-label="Linode Cloud Manager on GitHub" target="_blank" href="https://github.com/linode/manager/commits?author=martinmckenna">
-          Linode Cloud Manager
+          Linode Cloud Manager (GitHub page)
         </a>
       </li>
       <li>
@@ -213,6 +254,16 @@
       <li>
         <a aria-label="pure-react-carousel on GitHub" rel="noopener" target='_blank' href='https://github.com/express-labs/pure-react-carousel/commits?author=martinmckenna'>
           pure-react-carousel
+        </a>
+      </li>
+      <li>
+        <a aria-label="bruno REST client on GitHub" rel="noopener" target='_blank' href='https://github.com/usebruno/bruno/commits?author=martinmckenna'>
+          Bruno REST Client
+        </a>
+      </li>
+      <li>
+        <a aria-label="nanostores query on GitHub" rel="noopener" target='_blank' href='https://github.com/nanostores/query/commits?author=martinmckenna'>
+          Nanostores Query
         </a>
       </li>
     </ul>
