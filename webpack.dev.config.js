@@ -1,6 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // minify css
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'); // minimize css
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // make html file from template
 const TerserPlugin = require("terser-webpack-plugin");
 
@@ -39,11 +39,14 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
-      new OptimizeCssAssetsPlugin({
-        cssProcessorOptions: {
-          discardComments: {
-            removeAll: true,
-          },
+      new CssMinimizerPlugin({
+        minimizerOptions: {
+          preset: [
+            "default",
+            {
+              discardComments: { removeAll: true },
+            },
+          ],
         },
       }),
       new TerserPlugin()
