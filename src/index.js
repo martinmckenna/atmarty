@@ -1,6 +1,6 @@
-require('formdata-polyfill');
+// require('formdata-polyfill');
 import './styles/styles.css';
-import './components/contact';
+// import './components/contact';
 
 let today = new Date();
 let currentYear = today.getFullYear();

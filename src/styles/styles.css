@@ -9,6 +9,10 @@
 /////////
 /*/
 
+* {
+  letter-spacing: .05px;
+}
+
 body,
 html {
   margin: 0;
@@ -69,6 +73,20 @@ textarea {
   resize: vertical;
 }
 
+.philadelphia {
+  background-color: #046A38;
+  color: white;
+  padding: 4px;
+  white-space: nowrap;
+}
+
+.sandiego {
+  background-color: #2F241D;
+  color: #FFC425;
+  padding: 4px;
+  white-space: nowrap;
+}
+
 @media (max-width: 500px) {
   h1 {
     font-size: 1.8em;
@@ -82,7 +100,7 @@ textarea {
   p,
   span,
   li {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 }
 
@@ -169,11 +187,6 @@ BODY
 //
 */
 
-.about-desc {
-  padding: 0 2em;
-  text-align: left;
-}
-
 .card {
   width: 45%;
   flex-grow: 1;
@@ -182,9 +195,9 @@ BODY
   margin: 1em;
 }
 
-.card.project {
+/* .card.project {
   width: 20%;
-}
+} */
 
 .card-header {
   width: 100%;
@@ -193,8 +206,8 @@ BODY
 }
 
 .card-desc {
-  width: 90%;
-  margin: 0 auto;
+  padding: 0 2em;
+  text-align: left;
 }
 
 .card-list {
@@ -245,21 +258,21 @@ BODY
 }
 
 @media (max-width: 1280px) {
-  .card.contact {
+  /* .card {
     width: 90%;
-  }
+  } */
 }
 
 @media (max-width: 1100px) {
-  .card.project {
+  /* .card {
     width: 40%;
-  }
+  } */
 }
 
 @media (max-width: 700px) {
-  .card.project {
+  /* .card {
     width: 90%;
-  }
+  } */
 }
 
 /* 

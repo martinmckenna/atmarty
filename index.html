@@ -9,18 +9,6 @@
   <meta name="robots" content="index, follow" />
   <link rel="icon" href="./dist/assets/logo.ico" type="image/x-icon" />
   <title>Martin McKenna - Front-End Engineer</title>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88950785-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-88950785-1');
-  </script>
 <script defer src="bundle.js"></script><link href="styles.min.css" rel="stylesheet"></head>
 
 <body>
@@ -83,26 +71,14 @@
   </header>
   <div class="card">
     <h1 class="card-header">My Name is Marty</h1>
-    <p class="about-desc">
-      I am a front-end developer from Philadelphia (now based in San Diego), who specializes in building functional user
+    <p class="card-desc">
+      I am a software developer from <span class="philadelphia">Philadelphia</span> (go birds), now based in <span class="sandiego">San Diego</span>, who specializes in building functional user
       interfaces and Web APIs. I'm big on code quality, testing that makes sense, and creating
-      extremely modular, re-usable code. Over my career, I've gained experience in the eCommerce, cloud hosting, sports-betting, and digital marketing
-      industries.
+      extremely modular, re-usable code. I also really care about correct markup and accessibility and you can run this site through a compliance checker to test that point.
+      Over my career, I've gained experience in the eCommerce, cloud hosting, sports-betting, and digital marketing
+      industries. If you want to email me, you can do that at <a href="mailto:martinmckenna@use.startmail.com">martinmckenna@use.startmail.com</a>.
     </p>
-    <p class="about-desc">
-      I like a lot of tech, but I'm really partial to the React and TypeScript ecosystem. In fact,
-      I like React and TypeScript so much that I've created a 
-      <a aria-label="TypeScript project on GitHub" target="_blank" href="https://github.com/martinmckenna/base-ts-module">
-        just</a> a
-      <a aria-label="TypeScript project on GitHub" target="_blank" href="https://github.com/martinmckenna/vanilla-ts-starter">
-        handful</a> of
-      <a aria-label="TypeScript project on GitHub" target="_blank" href="https://github.com/martinmckenna/gatsby-typescript-starter">
-        starter projects</a>, for quick bootstrapping. If you'd like to see what I'm working on in my spare time, please refer to my
-        <a aria-label="Martin McKenna's GitHub Account" rel="noopener" target="_blank" href="https://github.com/martinmckenna">GitHub account</a> or take a look at the
-        <a aria-label="Projects Section" href="#projects">Projects section</a> below. If you'd like to get in touch, use that
-        <a aria-label="Contact Form" href='#contact'>contact form.</a>
-    </p>
-    <p class="about-desc">
+    <p class="card-desc">
       Some notable work-related projects I've worked on include:
     </p>
     <ul class="card-list card-desc work-list">
@@ -124,7 +100,7 @@
           rel="noopener noreferrer"
         >
           The Barstool Sportsbook
-        </a>
+        </a> (now ESPN Bet)
       </li>
       <li>
         <a 
@@ -136,9 +112,78 @@
           Linode Cloud Manager
         </a>
       </li>
+      <li>
+        <a 
+          aria-label="Niche.com, a website for finding colleges" 
+          href="https://niche.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Niche.com
+        </a>
+      </li>
     </ul>
   </div>
-  <div class="card contact">
+  <div class="card project cta-3">
+    <h2 class="card-header">Open Source Contributions</h2>
+    <p class="card-desc">
+      I believe contributing to open-source projects is important - it's what makes
+      building tools on the web fun. Here's some projects I've contributed to in the
+      past:
+    </p>
+    <ul class='card-desc card-list work-list'>
+      <li>
+        <a aria-label="Linode Cloud Manager on GitHub" target="_blank" href="https://github.com/linode/manager/commits?author=martinmckenna">
+          Linode Cloud Manager (GitHub page)
+        </a>
+      </li>
+      <li>
+        <a aria-label="Notistack on GitHub" rel="noopener" target='_blank' href='https://github.com/iamhosseindhv/notistack/commits?author=martinmckenna'>
+          Notistack
+        </a>
+      </li>
+      <li>
+        <a aria-label="filemanager-webpack-plugin on GitHub" rel="noopener" target='_blank' href='https://github.com/gregnb/filemanager-webpack-plugin/commits?author=martinmckenna'>
+          filemanager-webpack-plugin
+        </a>
+      </li>
+      <li>
+        <a aria-label="Storybook on GitHub" rel="noopener" target='_blank' href='https://github.com/storybooks/storybook/commits?author=martinmckenna'>
+          Storybook
+        </a>
+      </li>
+      <li>
+        <a aria-label="pure-react-carousel on GitHub" rel="noopener" target='_blank' href='https://github.com/express-labs/pure-react-carousel/commits?author=martinmckenna'>
+          pure-react-carousel
+        </a>
+      </li>
+      <li>
+        <a aria-label="bruno REST client on GitHub" rel="noopener" target='_blank' href='https://github.com/usebruno/bruno/commits?author=martinmckenna'>
+          Bruno REST Client
+        </a>
+      </li>
+      <li>
+        <a aria-label="nanostores query on GitHub" rel="noopener" target='_blank' href='https://github.com/nanostores/query/commits?author=martinmckenna'>
+          Nanostores Query
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- <div class="card contact">
+    <p class="about-desc">
+      I am a front-end developer from Philadelphia (now based in San Diego), who specializes in building functional user
+      interfaces and Web APIs. I'm big on code quality, testing that makes sense, and creating
+      extremely modular, re-usable code. Over my career, I've gained experience in the eCommerce, cloud hosting, sports-betting, and digital marketing
+      industries.
+    </p>
+    <p class="about-desc">
+      I am a front-end developer from Philadelphia (now based in San Diego), who specializes in building functional user
+      interfaces and Web APIs. I'm big on code quality, testing that makes sense, and creating
+      extremely modular, re-usable code. Over my career, I've gained experience in the eCommerce, cloud hosting, sports-betting, and digital marketing
+      industries.
+    </p>
+  </div> -->
+  <!-- <div class="card contact">
     <h2 class="card-header" id='contact'>Contact</h2>
     <form id="contact-form" class="contact-form">
       <div class="flex-form-wrapper">
@@ -196,12 +241,12 @@
         class="form-field submit" 
       />
     </form>
-  </div>
+  </div> -->
   <div id="projects" class="card project cta-1">
     <h2 class="card-header">Cocktails App
-      <a aria-label="cocktails app on github" rel="noopener" target="_blank" href="https://github.com/martinmckenna/cocktails-app" class="proj-link">Frontend</a>
+      <a aria-label="cocktails app on codeberg" rel="noopener" target="_blank" href="https://codeberg.org/martinmckenna/cocktails-app" class="proj-link">Frontend</a>
       |
-      <a aria-label="Cocktails API on GitHub" rel="noopener" target="_blank" href="https://github.com/martinmckenna/cocktails-api" class="proj-link">API</a>
+      <a aria-label="Cocktails API on codeberg" rel="noopener" target="_blank" href="https://codeberg.org/martinmckenna/cocktails-api" class="proj-link">API</a>
     </h2>
     <p class="card-desc">
       Cocktails App is a digitized version of a cocktail recipe book. Plain and simple - the user
@@ -210,68 +255,35 @@
       cocktails, while admin users can create and delete ingredients and cocktails. 
       This project calls a Python/Flask-based API for data. The front-end was built in React and TypeScript.
     </p>
+    <p class="card-desc">
+      I used to host this online, but now it just lives as a project in GitHub, but still very runnable if you want to pull and start it yourself!
+    </p>
   </div>
   <div class="card project cta-2">
     <h2 class="card-header">Authorization API
-      <a aria-label="Authorization API on GitHub" rel="noopener" target="_blank" href="https://github.com/martinmckenna/authorization-app" class="proj-link">on Github</a>
+      <a aria-label="Authorization API on codeberg" rel="noopener" target="_blank" href="https://codeberg.org/martinmckenna/authorization-app" class="proj-link">in Python</a>
+      |
+      <a aria-label="Authorization API on codeberg" rel="noopener" target="_blank" href="https://codeberg.org/martinmckenna/rust-authorization" class="proj-link">in Rust</a>
     </h2>
     <p class="card-desc">
-      This authorization API is a Python/Flask-based service, capable of handling authorization for
+      I wrote this authorization API in Python then a second time in Rust a few years later. 
+    </p>
+    <p class="card-desc">      
+      The API is capable of handling authorization for
       users. It exposes of few different endpoints for creating accounts, logging in and out, and
-      getting the user's profile. Logged in users are returned an API token valid for 15 minutes
+      getting the user's profile. Logged in users are returned an API token (a JSON web token) valid for 15 minutes
       that can then be used to validate subsequent requests and finally blacklisted when the user
       calls the logout endpoint.
     </p>
-  </div>
-  <div class="card project cta-3">
-    <h2 class="card-header">Open Source Contributions</h2>
-    <p class="card-desc">
-      I believe contributing to open-source projects is important - it's what makes
-      building tools on the web fun. Here's some projects I've contributed to in the
-      past:
+    <p class="card-desc">      
+      I'm well aware that black-listing JWTs isn't really a standard practice, since JWTs are supposed to
+      be short-lived in the first place, but this project was for practice, so get off my back okay?!  
     </p>
-    <ul class='card-desc card-list opensource-list'>
-      <li>
-        <a aria-label="Linode Cloud Manager on GitHub" target="_blank" href="https://github.com/linode/manager/commits?author=martinmckenna">
-          Linode Cloud Manager (GitHub page)
-        </a>
-      </li>
-      <li>
-        <a aria-label="Notistack on GitHub" rel="noopener" target='_blank' href='https://github.com/iamhosseindhv/notistack/commits?author=martinmckenna'>
-          Notistack
-        </a>
-      </li>
-      <li>
-        <a aria-label="filemanager-webpack-plugin on GitHub" rel="noopener" target='_blank' href='https://github.com/gregnb/filemanager-webpack-plugin/commits?author=martinmckenna'>
-          filemanager-webpack-plugin
-        </a>
-      </li>
-      <li>
-        <a aria-label="Storybook on GitHub" rel="noopener" target='_blank' href='https://github.com/storybooks/storybook/commits?author=martinmckenna'>
-          Storybook
-        </a>
-      </li>
-      <li>
-        <a aria-label="pure-react-carousel on GitHub" rel="noopener" target='_blank' href='https://github.com/express-labs/pure-react-carousel/commits?author=martinmckenna'>
-          pure-react-carousel
-        </a>
-      </li>
-      <li>
-        <a aria-label="bruno REST client on GitHub" rel="noopener" target='_blank' href='https://github.com/usebruno/bruno/commits?author=martinmckenna'>
-          Bruno REST Client
-        </a>
-      </li>
-      <li>
-        <a aria-label="nanostores query on GitHub" rel="noopener" target='_blank' href='https://github.com/nanostores/query/commits?author=martinmckenna'>
-          Nanostores Query
-        </a>
-      </li>
-    </ul>
   </div>
   <footer>
 
     <div class="icon-bar">
-      <a aria-label="Martin McKenna's account on GitHub" rel="noopener" target="_blank" href="https://github.com/martinmckenna">
+      <a aria-label="Martin McKenna's account on codeberg" rel="noopener" target="_blank" href="https://codeberg.org/martinmckenna">
         <?xml version="1.0" encoding="iso-8859-1"?>
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
           y="0px" viewBox="0 0 46.752 46.752" style="enable-background:new 0 0 46.752 46.752;" xml:space="preserve">
