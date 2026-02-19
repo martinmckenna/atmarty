@@ -65,7 +65,7 @@ input,
 p,
 label,
 span:not(.tingle-modal__closeIcon) {
-  font-family: 'Libre Baskerville', Arial, sans-serif;
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
   line-height: 2.1em;
 }
 
